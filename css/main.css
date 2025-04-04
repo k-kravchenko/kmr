@@ -20,6 +20,7 @@ nav a {
 	padding: 1rem;
 	color: #FFF;
 	text-decoration: none;
+	padding-right: 2rem;
 }
 
 nav a.hover { 
@@ -45,7 +46,7 @@ h4 {
 p {
 	font-family: "Source Sans 3";
 	font-size: 1.125rem;
-	margin-bottom: 2rem;
+	margin: 0 0 2rem 0;
 }
 
 .p2 {
@@ -54,10 +55,12 @@ p {
 }
 
 header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	background-color: #1B3A4B;
 	padding: 0 80px;
 }
-
 
 img{
 	max-width:100%;
@@ -76,14 +79,22 @@ img{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
+	margin-bottom: 5rem;
 }
 
-.readmore-button {
+.donate-button, .readmore-button {
 	color: #FFF;
 	text-decoration: none;
 	background-color: #CD0205;
 	font-family: "Source Sans 3";
-	font-size: ;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 150%;
+	padding: 0.5rem 1.25rem;
+}
+
+.donate-button{
+	margin-left: 5.75rem;
 }
 
 .hero{
@@ -94,23 +105,18 @@ img{
 	min-height: 42rem;
 	display: flex; 
 	align-items: center;
-	
-	
 }
 
 .hero article{
 	padding-left: 5rem;
 }
 
-figure {
-	margin-left: 0;
+.stat h2{
+	margin-bottom: 0.5rem;
 }
 
-blockquote {
-	font-size: 1.5rem;
-	font-style: italic;
-	color: red; 
-	margin: 0.5rem;
+figure {
+	margin-left: 0;
 }
 
 footer{ /* ----- removed dot - footer is not a class + deleted footer p because we don't have such an element ---- */
