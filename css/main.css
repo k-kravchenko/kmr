@@ -1,0 +1,90 @@
+body {
+	font-family: Helvetica, Arial, sans-serif; /* ----- added commas ---- */
+	color: #000;
+
+}
+
+h1 {
+	font-size: 4rem;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+nav a {
+	display: inline-block;
+	padding: 1rem;
+	background-color: #007FFF; /* ----- added # before hex code ---- */
+	color: #FFF;
+	text-decoration: none;
+}
+
+nav a.hover { 
+	background-color: #888;
+}
+
+h2 {
+	font-size: 3rem;
+	margin: 3rem 0 0.5rem;
+}
+
+h1, h2, h3{ 
+	font-weight: normal;
+
+}
+
+
+img{
+	max-width:100%;
+}
+
+main{
+	background-color: #d3d3d3; /* ----- added openning and closing symbols (:;) ---- */
+	padding: 2rem 0;
+
+}
+
+section{
+	max-width:60rem;
+	margin:0 auto 2rem;
+	background-color: white;
+	padding: 1rem;
+
+	text-align:left;
+}
+
+.hero{
+	background:url(../img/hero-img.jpg);
+	color:rgb(245, 5, 5);
+	padding:2rem;
+	max-width:100%;
+	min-height: 19rem;
+	position: relative; /* ----- Added to position ".hero article" absolutely ---- */
+	display: flex; /* ----- Added to position ".hero article" to the bottom of the hero section ---- */
+	align-items: flex-end;
+	
+}
+
+.hero article{
+	background-color: rgba(55,55,55,50%); 
+	max-width: 80%;
+	padding: 1rem;
+	bottom: 2rem;
+}
+
+figure {
+	margin-left: 0;
+}
+
+blockquote {
+	font-size: 1.5rem;
+	font-style: italic;
+	color: red; 
+	margin: 0.5rem;
+}
+
+footer{ /* ----- removed dot - footer is not a class + deleted footer p because we don't have such an element ---- */
+	background-color: rgb(150,0,0); 
+	color:white;
+	min-height: 5rem;
+	padding: 2rem;
+}
