@@ -70,8 +70,9 @@ main{
 	background-color: #F5F9FB;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	
 }
-.stats-section{
+.numbers{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
