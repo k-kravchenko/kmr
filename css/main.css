@@ -1,10 +1,18 @@
+.krona-one-regular {
+	font-family: "Krona One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }  
+  
+
 body {
-	font-family: Helvetica, Arial, sans-serif; /* ----- added commas ---- */
+	font-family: 'Krona One', 'Source Sans 3', 'Arial', sans-serif;
 	color: #000;
 
 }
 
 h1 {
+	font-family: 'Krona One';
 	font-size: 4rem;
 	margin-top: 0;
 	margin-bottom: 1rem;
@@ -13,7 +21,6 @@ h1 {
 nav a {
 	display: inline-block;
 	padding: 1rem;
-	background-color: #007FFF; /* ----- added # before hex code ---- */
 	color: #FFF;
 	text-decoration: none;
 }
@@ -30,6 +37,10 @@ h2 {
 h1, h2, h3{ 
 	font-weight: normal;
 
+}
+
+header{
+	background-color: #1B3A4B;
 }
 
 
@@ -54,7 +65,7 @@ section{
 
 .hero{
 	background:url(../img/hero-img.jpg);
-	color:rgb(245, 5, 5);
+	color:#FFF;
 	padding:2rem;
 	max-width:100%;
 	min-height: 19rem;
