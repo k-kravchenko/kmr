@@ -73,7 +73,6 @@ img{
 	grid-template-columns: 1fr 1fr;
 	justify-items: end;
 	padding: 7rem 0 7rem 5rem;
-	
 }
 .numbers{
 	display: grid;
@@ -113,6 +112,27 @@ img{
 
 .stat h2{
 	margin-bottom: 0.5rem;
+}
+
+.safety-section{
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: start;
+	padding: 7rem 0 7rem 5rem;
+}
+
+.get-involved {
+	background-color: #F5F9FB;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: end;
+	padding: 7rem 0 7rem 5rem;
+}
+
+.news-updates {
+	background-color: #fff;
+	padding: 7rem 0 7rem 5rem;
 }
 
 figure {
