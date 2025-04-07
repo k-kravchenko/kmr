@@ -78,6 +78,7 @@ header {
 
 img{
 	max-width:100%;
+	object-fit: cover;
 }
 
 
@@ -130,6 +131,7 @@ img{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-items: start;
+	align-items: center;
 	padding: 7rem 5rem;
 }
 
@@ -138,6 +140,7 @@ img{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-items: end;
+	align-items: center;
 	padding: 7rem 5rem;
 }
 
