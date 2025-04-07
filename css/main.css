@@ -109,7 +109,7 @@ img{
 
 
 .hero{
-	background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/kevin-schmid-hero.jpg') no-repeat center center;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/kevin-schmid-hero.jpg') no-repeat center center;
 	background-size: cover;
 	color:#FFF;
 	max-width:100%;
@@ -248,4 +248,26 @@ a.p2{
 	flex-direction: row;
 	text-decoration: underline;
 	gap: 1.5rem;
+}
+
+/* Safety Page */ 
+.safety-intro {
+	padding: 7rem 5rem;
+}
+
+.safety-headline {
+	margin-bottom: 5rem;
+	max-width: 768px;
+}
+
+.safety-intro-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
+	justify-items: stretch;
+	align-items: start;
+}
+
+.safety-info-text {
+	max-width: 630px;
 }
