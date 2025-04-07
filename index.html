@@ -16,18 +16,22 @@
 <body>
   <header>
     <nav>
-      <a href="index.html"><img src="img/kmr.png" alt="KMR logo" width="40px" height="28px"></a>
-      <a href="#weather-section">
-        <a href="#weather-section">
-          <img src="img/weather-icon.png" width="140px" height="140px" alt="Weather icon" />
-          <img src="img/chevron-icon.png" width="16x" height="16px" alt="Dropdown chevron" />
-        </a>
+      <section class="logo">
+      <a href="index.html"><img src="img/KMR.png" alt="KMR logo" width="64" height="18"></a>
+      </section>
+     <section class="navlinks">
+      <a class="weather-section" href="#weather-section">
+          <img src="img/weather-icon.png" width="54" height="44" alt="Weather icon"/>
+          <img src="img/arrow-icon.png" width="36" height="18" alt="Dropdown chevron"/>
       </a>
       <a href="#about-us">About Us</a>
       <a href="#safety-info">Safety Info</a>
       <a href="#news-and-updates">News & Updates</a>
       <a href="#get-involved">Get Involved</a>
+     </section>
+     <section class="donate">
       <a class=donate-button href="#donate-form">Donate Today</a>
+    </section>
     </nav>
   </header>
 
@@ -40,7 +44,7 @@
   </section>
 
   <section class="our-mission">
-    <section class="stats-section"></div>
+    <section class="stats-section">
     <div class="description">
     <h2>Our Mission</h2>
     <p>At Kalmont Mountain, our mission is to empower outdoor adventurers with the knowledge, tools, and support they
@@ -82,12 +86,12 @@
   </section>
 
   <section class="safety-section">
-    <div class="safety-image">
+    <section class="safety-image">
       <img src="img/3workerssmiling.png" height="640px" width="630px"
         alt="Mountain rescue team smiling in snowy mountains" />
-    </div>
+    </section>
 
-    <div class="safety-content">
+    <section class="safety-content">
       <h2 class="section-title">Safety</h2>
       <p>
         At Kalmont Mountain Rescue, safety is more than a response — it’s a mindset.
@@ -99,12 +103,12 @@
         <li class="p2">Community-led safety workshops and education</li>
         <li class="p2">Essential guides for hikers, skiers, and backcountry travelers</li>
       </ul>
-    </div>
-    <a class=red-button href="#safety-info">Learn More</a>
+      <a class=red-button href="#safety-info">Learn More</a>
+    </section>
   </section>
   
   <section class="get-involved">
-    <div class="get-involved-content">
+    <section class="get-involved-content">
       <h2 class="section-title">Get Involved</h2>
       <p>
         Kalmont Mountain Rescue is powered by people who care. Whether you’re
@@ -116,46 +120,56 @@
         <li class="p2">Volunteer your time, skills, or expertise</li>
         <li class="p2">Join community events and safety outreach programs</li>
       </ul>
-    </div>
     <a class=red-button href="#get-involved">Read More</a>
-    <div class="get-involved-image">
+    </section>
+    <section class="get-involved-image">
       <img src="img/volunteers.png" width="630px" height="640px" alt="Volunteers smiling and shaking hands in snowy forest"/>
-    </div>
+    </section>
   </section>
 
   <section class="news-updates" id="news-and-updates">
+    <section class="title">
     <h2>News & Updates</h2>
     <p>Stay up to date with the latest safety information, rescue stories, and community highlights from Kalmont and beyond.</p>
+    </section>
   
-    <div class="news-cards">
+    <section class="news-cards">
       <article class="news-card">
         <img src="img/chris-curry-uxTtlJYER2c-unsplash.jpg" width="425.33px" height="300px" alt="Lighthouse in a whiteout" />
+        <div class="card-title">
         <h4>How One Beacon Saved Two Lives in a Whiteout</h4>
         <p class="p2">A firsthand look at a high-risk rescue mission and how preparation made all the difference.</p>
+      </div>
         <a class="readmore-hyperlink" href="#">Read more →</a>
       </article>
   
       <article class="news-card">
         <img src="img/craig-bradford-J_xplkxx--8-unsplash.jpg" width="425.33px" height="300px" alt="Person hiking through snow" />
+        <div class="card-title">
         <h4>Top 5 Cold Weather Survival Skills</h4>
         <p class="p2">Know how to stay safe and react quickly when winter conditions take a turn.</p>
+      </div>
         <a class="readmore-hyperlink" href="#">Read more →</a>
       </article>
   
       <article class="news-card">
         <img src="img/glade-optics-ttGLlNElbCc-unsplash.jpg" width="425.33px" height="300px" alt="Volunteers on ski patrol" />
+        <div class="card-title">
         <h4>Meet the Volunteers Behind the Night Patrol</h4>
         <p class="p2">Get to know the people who show up when it matters most — often in the dark and cold.</p>
+      </div>
         <a class="readmore-hyperlink" href="#">Read more →</a>
       </article>
-    </div>
+    </section>
   
-    <a class="viewblog-button" href="#news-and-updates">View Blog</a>
+    <a class="button-secondary" href="#news-and-updates">View Blog</a>
   </section>
 
   <section class="explore-safely">
-    <div class="explore-safely-content">
+    <section class="explore-safely-content">
       <h2>Explore Safely. <br>Return Confidently.</h2>
+    </section>
+    <section>
       <p>
         At Kalmont Mountain Rescue, we’re here to support every step of your journey —
         before, during, and after your time on the mountain. Whether you’re preparing for
@@ -166,17 +180,17 @@
         <a class="button-primary" href="#safety-info">View Safety Resources</a>
         <a class="button-secondary" href="#contact-us">Contact Our Team</a>
       </div>
-    </div>
+    </section>
   </section>
 </main>
 
-<footer class="site-footer">
+<footer>
   <div class="footer-top">
     
     <!-- Logo & Contact Info -->
-    <div class="footer-col">
+    <section class="footer-col">
       <a href="index.html">
-        <img src="img/kmr.png" alt="KMR logo" width="40px" height="28px">
+        <img src="img/KMR.png" alt="KMR logo" width="110px" height="32px">
       </a>
 
       <p><strong>Address:</strong><br>
@@ -193,10 +207,10 @@
         <a href="#"><img src="img/linkedin.png" width="18px" height="18px" alt="LinkedIn Icon" /></a>
         <a href="#"><img src="img/youtube.png" width="20px" height="16px" alt="YouTube Icon" /></a>
       </div>
-    </div>
+    </section>
 
     <!-- Quick Links -->
-    <div class="footer-column">
+    <section class="footer-column">
       <h4><strong>Quick Links</strong></h4>
       <div>
         <a class="p2" href="#about-us">About Us</a><br>
@@ -205,30 +219,33 @@
         <a class="p2" href="#contact-us">Contact Us</a><br>
         <a class="p2" href="#donate">Donate</a>
       </div>
-    </div>
+    </section>
 
     <!-- Safety Info -->
-    <div class="footer-column">
+    <section class="footer-column">
       <h4><strong>Safety Info</strong></h4>
       <div>
         <a class="p2" href="#">Avalanche Safety</a><br>
         <a class="p2" href="#">Hypothermia Safety</a>
       </div>
-    </div>
+    </section>
 
   </div>
 
   <hr>
 
   <!-- Bottom Copyright -->
-  <div class="footer-bottom">
+  <section class="footer-bottom">
+    <section class="copyright">
     <p class="p3">© 2024 KMR. All rights reserved.</p>
-    <div class="legal-links">
+    </section>
+
+    <section class="legal-links">
       <a class="p3" href="#">Privacy Policy</a>
       <a class="p3" href="#">Terms of Service</a>
       <a class="p3" href="#">Cookies Settings</a>
-    </div>
-  </div>
+  </section>
+</section>
 </footer>
 
 </body>

@@ -13,18 +13,35 @@ h1 {
 	margin-bottom: 1rem;
 }
 
+nav{
+	display: grid;
+	align-items: center;
+	grid-template-columns: 0.3fr 0.55fr 0.15fr;
+	padding: 1rem 5rem;
+	justify-items: stretch;
+}
+
 nav a {
 	font-family: "Source Sans 3";
 	font-size: 1.125rem;
 	display: inline-block;
-	padding: 1rem;
 	color: #FFF;
 	text-decoration: none;
-	padding-right: 2rem;
 }
 
 nav a.hover { 
 	background-color: #888;
+}
+
+.navlinks {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.weather-section {
+	display: flex;
+	align-items: center;
 }
 
 h2 {
@@ -41,6 +58,7 @@ h3 {
 h4 {
 	font-family: "Source Sans 3";
 	font-size: 1.5rem;
+	margin: 0 0 0.5rem 0;
 }
 
 p {
@@ -54,12 +72,8 @@ p {
 	font-size: 1rem;
 }
 
-header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+header {
 	background-color: #1B3A4B;
-	padding: 0 80px;
 }
 
 img{
@@ -72,7 +86,7 @@ img{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-items: end;
-	padding: 7rem 0 7rem 5rem;
+	padding: 7rem 5rem;
 }
 .numbers{
 	display: grid;
@@ -81,7 +95,7 @@ img{
 	margin-bottom: 5rem;
 }
 
-.donate-button, .readmore-button {
+.donate-button, .red-button, .button-primary {
 	color: #FFF;
 	text-decoration: none;
 	background-color: #CD0205;
@@ -92,9 +106,6 @@ img{
 	padding: 0.5rem 1.25rem;
 }
 
-.donate-button{
-	margin-left: 5.75rem;
-}
 
 .hero{
 	background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/kevin-schmid-hero.jpg') no-repeat center center;
@@ -119,7 +130,7 @@ img{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-items: start;
-	padding: 7rem 0 7rem 5rem;
+	padding: 7rem 5rem;
 }
 
 .get-involved {
@@ -127,21 +138,111 @@ img{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-items: end;
-	padding: 7rem 0 7rem 5rem;
+	padding: 7rem 5rem;
 }
 
 .news-updates {
 	background-color: #fff;
-	padding: 7rem 0 7rem 5rem;
+	padding: 7rem 5rem;
 }
 
-figure {
-	margin-left: 0;
+.news-updates {
+	display: grid;
+	grid-template-columns: auto;
+	justify-items: center;
 }
 
-footer{ /* ----- removed dot - footer is not a class + deleted footer p because we don't have such an element ---- */
-	background-color: rgb(150,0,0); 
+.title {
+	display: grid;
+	justify-items: center;
+}
+
+.news-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2rem;
+}
+
+.news-card {
+	max-width: 425px;
+}
+
+.explore-safely {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: #F5F9FB;
+	padding: 7rem 5rem;
+}
+
+.safety-list, .get-involved-list, .title, .news-cards {
+	margin-bottom: 5rem;
+}
+
+.readmore-hyperlink {
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+	text-decoration: none;
+	color: #1C1C1C;
+}
+.button-secondary {
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+	text-decoration: none;
+	color: #1C1C1C;
+	padding: 0.5rem 1.25rem;
+	border: solid #1C1C1C;
+}
+
+.card-title {
+	padding: 1.5rem 0 0 0;
+}
+
+.explore-safely-buttons {
+	display: flex;
+	gap: 1rem;
+}
+
+footer { 
+	background-color: #1B3A4B; 
 	color:white;
 	min-height: 5rem;
 	padding: 2rem;
+}
+
+.footer-col img {
+	margin-bottom: 2rem;
+}
+
+footer a {
+	color:#FFF;
+	text-decoration: none;
+}
+
+a.p2{
+	padding-bottom: 0.5rem;
+}
+
+.footer-top {
+	display: grid;
+	grid-template-columns: 0.7fr 0.15fr 0.15fr;
+	padding: 5rem;
+}
+
+.footer-bottom {
+	display: grid;
+	grid-template-columns: 0.7fr 0.3fr;
+	padding: 2rem 5rem;
+}
+
+.p3 {
+	font-family: "Source Sans 3";
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+
+.legal-links {
+	display: flex;
+	flex-direction: row;
+	text-decoration: underline;
+	gap: 1.5rem;
 }
