@@ -105,6 +105,7 @@ img{
 	font-weight: 700;
 	line-height: 150%;
 	padding: 0.5rem 1.25rem;
+	border: none;
 }
 
 
@@ -305,3 +306,83 @@ a.p2{
 	justify-content: center;
 	padding: 7rem 5rem;
 }
+
+
+.contact-us {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 7rem 5rem;
+	gap: 80px;
+  }
+  
+  .contact-form-area {
+	max-width: 600px;
+	flex: 1;
+  }
+  
+  .contact-form-area form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+  }
+  
+  .contact-form-area label {
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea.message-box {
+	width: 100%;
+	padding: 0.75rem;
+	border: 1px solid #333;
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+  }
+  
+  .message-box {
+	min-height: 160px;
+	resize: vertical;
+  }
+  
+  .form-terms {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: -0.25rem;
+  }
+  
+  .form-terms input[type="checkbox"] {
+	margin: 0;
+  }
+  
+  .p3 {
+	font-family: "Source Sans 3";
+	font-size: 0.875rem;
+	margin: 0;
+  }
+  
+  .red-button {
+	background-color: #CD0205;
+	color: #fff;
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+	font-weight: 700;
+	padding: 0.75rem 1.25rem;
+	border: none;
+	cursor: pointer;
+	width: fit-content;
+  }
+  
+  .red-button:focus {
+	outline: none;
+  }
+  
+  .contact-image img {
+	width: 638.5px;
+	height: 734px;
+	object-fit: cover;
+	display: block;
+  }
