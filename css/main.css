@@ -319,6 +319,7 @@ a.p2{
 	align-items: flex-start;
 	padding: 7rem 5rem;
 	gap:  5rem;
+	margin-bottom: 5rem;
   }
   
   .contact-form-area {
@@ -394,8 +395,8 @@ a.p2{
 
 /* Added CSS for weather overlay popup */
 .hidden {
-  display: none;
-}
+	display: none !important;
+  }
 
 #weather-overlay {
   position: fixed;
@@ -403,13 +404,17 @@ a.p2{
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 62.5rem;
-  height: 54.5rem;
+  max-width: 72rem; 
+  max-height: 90vh;
   background-color: white;
-  border-radius: 1rem;
+  border-radius: 0;
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25);
   z-index: 1000;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 #close-weather-overlay {
@@ -427,8 +432,8 @@ a.p2{
 .weather-conditions {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
   gap: 2rem;
-  height: 100%;
 }
 
 .weather-left {
@@ -438,22 +443,34 @@ a.p2{
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
+  align-self: start;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
 }
-
-.weather-left h3,
-.weather-left h4,
-.weather-left p,
-.weather-left h2 {
-  margin: 0;
-  line-height: 1.4;
-}
-
-.weather-left h2 {
-  font-size: 3rem;
-}
-
+.weather-summary {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+  }
+  
+  .left-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	flex: 1;
+	min-width: 200px;
+  }
+  
+  .right-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.5rem;
+	flex: 1;
+	min-width: 200px;
+  }
+  
 .weather-right {
   display: flex;
   flex-direction: column;
@@ -463,3 +480,747 @@ a.p2{
 .graph-section h4 {
   margin-bottom: 0.75rem;
 }
+
+#weather-overlay h1 {
+  font-family: "Krona One";
+  font-size: 3.5rem;
+  margin: 0 0 2rem 0;
+  color: #1B3A4B;
+}
+
+.graph-section {
+  background-color: #F5F9FB;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.05);
+}
+
+
+.contact-options {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 2rem;
+	padding: 5rem;
+	margin-top: 0;
+  }
+  
+  .contact-card {
+	flex: 1;
+	text-align: left;
+  }
+  
+  .contact-card img {
+	margin-bottom: 1rem;
+  }
+  
+  .contact-card h4 {
+	font-size: 1.5rem;
+	margin: 0 0 1rem;
+  }
+  
+  .contact-card p {
+	margin: 0 0 1rem;
+  }
+  
+  .contact-card a {
+	color: #1C1C1C;
+	font-size: 1rem;
+	text-decoration: underline;
+  }
+
+  .locations-section {
+	padding: 7rem 5rem;
+	background-color: #F5F9FB;
+  }
+  
+  .locations-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 5rem;
+	margin-top: 4rem;
+  }
+  
+  .location-list {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+  }
+  
+  .location-item {
+	border-left: 2px solid transparent;
+	padding-left: 1rem;
+  }
+  
+  .location-item:first-child {
+	border-left-color: #CD0205;
+  }
+  
+  .location-item h4 {
+	font-family: "Source Sans 3";
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+  }
+  
+  .location-item p {
+	margin: 0.25rem 0;
+  }
+  
+  .location-map {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .location-map img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 0;
+  }
+
+/* Added CSS to force .contact-options and .locations-section to stack vertically */
+.contact-locations-wrapper {
+	display: block;
+	width: 100%;
+  }
+
+  .locations-section {
+	padding: 7rem 5rem;
+	background-color: #F5F9FB;
+	margin-top: 5rem;
+  }
+
+  body {
+	font-family: 'Krona One', 'Source Sans 3', 'Arial', sans-serif;
+	color: #000;
+
+}
+
+h1 {
+	font-family: "Krona One";
+	text-transform: uppercase;
+	font-size: 3.5rem;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+nav{
+	display: grid;
+	align-items: center;
+	grid-template-columns: 0.3fr 0.55fr 0.15fr;
+	padding: 1rem 5rem;
+	justify-items: stretch;
+}
+
+nav a,
+nav button.weather-section {
+	font-family: "Source Sans 3";
+	font-size: 1.125rem;
+	display: inline-flex;
+	align-items: center;
+	color: #FFF;
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+nav a.hover { 
+	background-color: #888;
+}
+
+.navlinks {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.weather-section {
+	display: flex;
+	align-items: center;
+}
+
+h2 {
+	font-family: "Krona One";
+	font-size: 3rem;
+	margin: 0 0 1.5rem 0;
+}
+
+h3 {
+	font-family: "Source Sans 3";
+	font-size: 2.5rem;
+}
+
+h4 {
+	font-family: "Source Sans 3";
+	font-size: 1.5rem;
+	margin: 0 0 0.5rem 0;
+}
+
+p {
+	font-family: "Source Sans 3";
+	font-size: 1.125rem;
+	margin: 0 0 2rem 0;
+}
+
+.p2 {
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+}
+
+header {
+	background-color: #1B3A4B;
+}
+
+img{
+	max-width:100%;
+	object-fit: cover;
+}
+
+
+.our-mission{
+	background-color: #F5F9FB;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: end;
+	padding: 7rem 5rem;
+}
+.numbers{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	margin-bottom: 5rem;
+}
+
+.donate-button, .red-button, .button-primary {
+	color: #FFF;
+	text-decoration: none;
+	background-color: #CD0205;
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 150%;
+	padding: 0.5rem 1.25rem;
+	border: none;
+}
+
+
+.hero{
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/kevin-schmid-hero.jpg') no-repeat center center;
+	background-size: cover;
+	color:#FFF;
+	max-width:100%;
+	min-height: 42rem;
+	display: flex; 
+	align-items: center;
+}
+
+.hero article{
+	padding-left: 5rem;
+}
+
+.stat h2{
+	margin-bottom: 0.5rem;
+}
+
+.safety-section{
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: start;
+	align-items: center;
+	padding: 7rem 5rem;
+}
+
+.get-involved {
+	background-color: #F5F9FB;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: end;
+	align-items: center;
+	padding: 7rem 5rem;
+}
+
+.news-updates {
+	background-color: #fff;
+	padding: 7rem 5rem;
+}
+
+.news-updates {
+	display: grid;
+	grid-template-columns: auto;
+	justify-items: center;
+}
+
+.title {
+	display: grid;
+	justify-items: center;
+}
+
+.news-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2rem;
+}
+
+.news-card {
+	max-width: 425px;
+}
+
+.explore-safely {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: #F5F9FB;
+	padding: 7rem 5rem;
+}
+
+.safety-list, .get-involved-list, .title, .news-cards {
+	margin-bottom: 5rem;
+}
+
+.readmore-hyperlink {
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+	text-decoration: none;
+	color: #1C1C1C;
+}
+.button-secondary {
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+	text-decoration: none;
+	color: #1C1C1C;
+	padding: 0.5rem 1.25rem;
+	border: solid #1C1C1C;
+}
+
+.card-title {
+	padding: 1.5rem 0 0 0;
+}
+
+.explore-safely-buttons {
+	display: flex;
+	gap: 1rem;
+}
+
+footer { 
+	background-color: #1B3A4B; 
+	color:white;
+	min-height: 5rem;
+	padding: 2rem;
+}
+
+.footer-col img {
+	margin-bottom: 2rem;
+}
+
+footer a {
+	color:#FFF;
+	text-decoration: none;
+}
+
+a.p2{
+	padding-bottom: 0.5rem;
+}
+
+.footer-top {
+	display: grid;
+	grid-template-columns: 0.7fr 0.15fr 0.15fr;
+	padding: 5rem;
+}
+
+.footer-bottom {
+	display: grid;
+	grid-template-columns: 0.7fr 0.3fr;
+	padding: 2rem 5rem;
+}
+
+.p3 {
+	font-family: "Source Sans 3";
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+
+.legal-links {
+	display: flex;
+	flex-direction: row;
+	text-decoration: underline;
+	gap: 1.5rem;
+}
+
+/* Safety Page */ 
+.safety-intro {
+	padding: 7rem 5rem;
+}
+
+.safety-headline {
+	margin-bottom: 5rem;
+	max-width: 768px;
+}
+
+.safety-intro-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
+	justify-items: stretch;
+	align-items: start;
+}
+
+.safety-info-text div{
+	padding-left: 2rem;
+	max-width: 598px;
+}
+
+.red-line {
+	border-left: solid;
+	border-color: #CD0205;
+	
+	
+}
+
+.avalanche-safety, .mountain-safety-message, .hypothermia-safety {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #F5F9FB;
+	padding: 7rem 5rem;
+}
+
+.avalanche-safety p, .mountain-safety-message p, .hypothermia-safety p {
+	max-width: 768px;
+}
+.avalanche-images, .cta-images {
+	display: grid;
+	grid-template-columns: 0.5fr 0.5fr;
+	align-items: center;
+	justify-items: center;
+	gap: 2rem;
+	padding: 7rem 5rem;
+}
+
+.hypothermia-image {
+	display: flex;
+	justify-content: center;
+	padding: 7rem 5rem;
+}
+
+
+.contact-us {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 7rem 5rem;
+	gap:  5rem;
+	margin-bottom: 5rem;
+  }
+  
+  .contact-form-area {
+	max-width: 600px;
+	flex: 1;
+  }
+  
+  .contact-form-area form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+  }
+  
+  .contact-form-area label {
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea.message-box {
+	width: 100%;
+	padding: 0.75rem;
+	border: 1px solid #333;
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+  }
+  
+  .message-box {
+	min-height: 160px;
+	resize: vertical;
+  }
+  
+  .form-terms {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: -0.25rem;
+  }
+  
+  .form-terms input[type="checkbox"] {
+	margin: 0;
+  }
+  
+  .p3 {
+	font-family: "Source Sans 3";
+	font-size: 0.875rem;
+	margin: 0;
+  }
+  
+  .red-button {
+	background-color: #CD0205;
+	color: #fff;
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+	font-weight: 700;
+	padding: 0.75rem 1.25rem;
+	border: none;
+	cursor: pointer;
+	width: fit-content;
+  }
+  
+  .red-button:focus {
+	outline: none;
+  }
+  
+  .contact-image img {
+	width: 638.5px;
+	height: 734px;
+	object-fit: cover;
+	display: block;
+  }
+
+/* Added CSS for weather overlay popup */
+.hidden {
+	display: none !important;
+  }
+
+#weather-overlay {
+  position: fixed;
+  top: 6.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 72rem; 
+  max-height: 90vh;
+  background-color: white;
+  border-radius: 0;
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  padding: 2.5rem 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#close-weather-overlay {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  z-index: 1001;
+}
+
+.weather-conditions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 2rem;
+}
+
+.weather-left {
+  background-color: #1B3A4B;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-self: start;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+}
+.weather-summary {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+  }
+  
+  .left-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	flex: 1;
+	min-width: 200px;
+  }
+  
+  .right-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.5rem;
+	flex: 1;
+	min-width: 200px;
+  }
+  
+.weather-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.graph-section h4 {
+  margin-bottom: 0.75rem;
+}
+
+#weather-overlay h1 {
+  font-family: "Krona One";
+  font-size: 3.5rem;
+  margin: 0 0 2rem 0;
+  color: #1B3A4B;
+}
+
+.graph-section {
+  background-color: #F5F9FB;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.05);
+}
+
+
+.contact-options {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 2rem;
+	padding: 5rem;
+	margin-top: 0;
+  }
+  
+  .contact-card {
+	flex: 1;
+	text-align: left;
+  }
+  
+  .contact-card img {
+	margin-bottom: 1rem;
+  }
+  
+  .contact-card h4 {
+	font-size: 1.5rem;
+	margin: 0 0 1rem;
+  }
+  
+  .contact-card p {
+	margin: 0 0 1rem;
+  }
+  
+  .contact-card a {
+	color: #1C1C1C;
+	font-size: 1rem;
+	text-decoration: underline;
+  }
+
+  .locations-section {
+	padding: 7rem 5rem;
+	background-color: #F5F9FB;
+  }
+  
+  .locations-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 5rem;
+	margin-top: 4rem;
+  }
+  
+  .location-list {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+  }
+  
+  .location-item {
+	border-left: 2px solid transparent;
+	padding-left: 1rem;
+  }
+  
+  .location-item:first-child {
+	border-left-color: #CD0205;
+  }
+  
+  .location-item h4 {
+	font-family: "Source Sans 3";
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+  }
+  
+  .location-item p {
+	margin: 0.25rem 0;
+  }
+  
+  .location-map {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .location-map img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 0;
+  }
+
+/* Added CSS to force .contact-options and .locations-section to stack vertically */
+.contact-locations-wrapper {
+	display: block;
+	width: 100%;
+  }
+
+  .locations-section {
+	padding: 7rem 5rem;
+	background-color: #F5F9FB;
+	margin-top: 5rem;
+  }
+  
+  .about-section {
+	padding: 7rem 5rem;
+  }
+  
+  .about-content {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5rem;
+	align-items: flex-start;
+  }
+  
+  .about-heading {
+	flex: 1 1 35%;
+	max-width: 35%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+  }
+  
+  .about-text {
+	flex: 1 1 60%;
+	min-width: 300px;
+  }
+  
+  .about-image {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 4rem;
+  }
+  
+  .about-image img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+  }
