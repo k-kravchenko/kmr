@@ -20,10 +20,10 @@
       <a href="index.html"><img src="img/KMR.png" alt="KMR logo" width="64" height="18"></a>
       </section>
      <section class="navlinks">
-      <a class="weather-section" href="#weather-section">
-          <img src="img/weather-icon.png" width="54" height="44" alt="Weather icon"/>
-          <img src="img/arrow-icon.png" width="36" height="18" alt="Dropdown chevron"/>
-      </a>
+      <button class="weather-section" id="weather-toggle" aria-label="Toggle weather panel">
+        <img src="img/weather-icon.png" width="54" height="44" alt="Weather icon" />
+        <img src="img/arrow-icon.png" width="36" height="18" alt="Dropdown chevron" />
+      </button>
       <a href="about-us.html">About Us</a>
       <a href="safety-info.html">Safety Info</a>
       <a href="news-and-updates.html">News & Updates</a>
@@ -248,6 +248,55 @@
 </section>
 </footer>
 
+<div id="weather-overlay" class="hidden">
+  <button id="close-weather-overlay" aria-label="Close weather panel">✕</button>
+  <section class="weather-conditions">
+    <div class="weather-left">
+      <img src="img/bigweathericon.png" alt="Cloudy with snow and wind" width="166" height="166" />
+      <h3>Today</h3>
+      <h4>Sunday, 23/03</h4>
+      <h2>-3°C</h2>
+      <p>°C | °F</p>
+      <p>Precipitation: 100%</p>
+      <p>Humidity: 93%</p>
+      <p>Wind: 13 km/h</p>
+      <h4>Snow Base</h4>
+      <p><strong>Downhill:</strong> 147 – 278cm</p>
+      <p><strong>Uphill:</strong> 278 – 374cm</p>
+      <p>Snowfall expected, occasionally heavy. Freezing levels dropping significantly.</p>
+    </div>
+    <div class="weather-right">
+      <div class="graph-section">
+        <h4>Latest Snowfall</h4>
+        <img src="img/lastestsnowfallgraph.png" alt="Bar graph showing snowfall in last 72, 48, and 24 hours" width="518" height="225" />
+      </div>
+      <div class="graph-section">
+        <h4>Avalanche Risk</h4>
+        <img src="img/avalancheriskgraph.png" alt="Avalanche risk levels from Sunday to Saturday" width="600" height="234" />
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('weather-toggle');
+    const overlay = document.getElementById('weather-overlay');
+
+    if (toggleBtn && overlay) {
+      toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        overlay.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!toggleBtn.contains(e.target) && !overlay.contains(e.target)) {
+          overlay.classList.add('hidden');
+        }
+      });
+    }
+  });
+</script>
 </body>
 
 </html>
