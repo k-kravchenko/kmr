@@ -187,7 +187,7 @@ img{
 	margin-bottom: 5rem;
 }
 
-.readmore-hyperlink {
+.readmore-hyperlink, .learnmore-hyperlink {
 	font-family: "Source Sans 3";
 	font-size: 1rem;
 	text-decoration: none;
@@ -1542,4 +1542,74 @@ a.p2{
   display: block;
 }
 
+/* Get Involved Page */
 
+.donation-section {
+	padding: 7rem 5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
+	justify-items: stretch;
+	align-items: start;
+}
+ .volunteer-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 7rem 5rem;
+ }
+
+ .volunteer-section p {
+	max-width: 768px;
+	text-align: center;
+ }
+
+.trusted-orgs {
+	background: #F5F9FB;
+	display: grid;
+	grid-template-columns: 0.3fr 0.75fr;
+	padding: 7rem 5rem;
+	align-items: center;
+	justify-items: stretch;
+}
+
+.org-text {
+	max-width: 320px;
+}
+
+.org-logos{
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+	justify-items: end;
+}
+
+.section-intro {
+	display: grid;
+	grid-template-columns: 0.5fr 0.1fr;
+	padding: 7rem 5rem 5rem 5rem;
+	align-items: end;
+	justify-items: end;
+	justify-content: space-between;
+}
+ 
+.event-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 0 5rem 7rem 5rem;
+	align-items: baseline;
+	gap: 8rem;
+}
+
+.event-card {
+	display: grid;
+	grid-template-columns: auto;
+	justify-items: start;
+	max-width: 425px;
+	align-items: end;
+	justify-content: space-between;
+}
+
+.event-card img {
+	padding-bottom: 1.5rem;
+}
