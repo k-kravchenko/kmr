@@ -32,3 +32,26 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// JS for an accordion
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const summary = item.querySelector('summary');
+  const arrow = summary.querySelector('.arrow'); 
+
+  summary.addEventListener('click', () => {
+    faqItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.removeAttribute('open');
+        otherItem.querySelector('.arrow').style.transform = 'rotate(0deg)';
+      }
+    });
+
+    if (item.hasAttribute('open')) {
+      arrow.style.transform = 'rotate(0deg)';
+    } else {
+      arrow.style.transform = 'rotate(180deg)';
+    }
+  });
+});
