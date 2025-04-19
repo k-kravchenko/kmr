@@ -10,6 +10,7 @@ h1 {
 	font-size: 3.5rem;
 	margin-top: 0;
 	margin-bottom: 1rem;
+	color: #1B3A4B;
 }
 
 nav{
@@ -122,6 +123,10 @@ img{
 	min-height: 42rem;
 	display: flex; 
 	align-items: center;
+}
+
+.hero h1 {
+	color: #ffff;
 }
 
 .hero article{
@@ -1543,6 +1548,9 @@ a.p2{
 }
 
 /* Get Involved Page */
+.donation-content {
+	max-width: 644px;
+}
 
 .donation-section {
 	padding: 7rem 5rem;
