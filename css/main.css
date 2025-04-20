@@ -170,12 +170,7 @@ img{
 	justify-items: center;
 }
 
-.blog-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
-	margin-bottom: 5rem; 
-  }
+
   
   .blog-card {
 	max-width: 425px;
@@ -1389,7 +1384,7 @@ a.p2{
 
 /* Updated .news-heading section with unique spacing and alignment */
 .news-heading {
-  padding: 7rem 5rem 0 5rem;
+  padding: 7rem 5rem;
   text-align: left;
   max-width: 768px;
 }
@@ -1427,7 +1422,6 @@ article.featured-article {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
 }
 
 .featured-content h2 {
@@ -1465,8 +1459,8 @@ article.featured-article {
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem 18rem;
-  padding: 5rem 5rem 7rem 5rem;
+  gap: 5rem 4rem;
+  padding: 5rem 7rem;
   background-color: #fff;
   overflow: visible; /* add this to ensure full height shows */
   justify-items: start;
