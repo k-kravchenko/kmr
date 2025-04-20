@@ -13,12 +13,12 @@ h1 {
 	color: #1B3A4B;
 }
 
-nav{
-	display: grid;
-	align-items: center;
-	grid-template-columns: 0.3fr 0.55fr 0.15fr;
-	padding: 1rem 5rem;
-	justify-items: stretch;
+nav {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.3fr 0.55fr 0.15fr;
+    padding: 1rem 5rem;
+    justify-items: stretch;
 }
 
 nav a,
@@ -120,7 +120,6 @@ img{
 	background-size: cover;
 	color:#FFF;
 	max-width:100%;
-	min-height: 42rem;
 	display: flex; 
 	align-items: center;
 }
@@ -759,6 +758,7 @@ img{
 	justify-items: end;
 	padding: 7rem 5rem;
 }
+
 .numbers{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -776,6 +776,8 @@ img{
 	line-height: 150%;
 	padding: 0.5rem 1.25rem;
 	border: none;
+	cursor: pointer;
+	width: fit-content;
 }
 
 
@@ -1615,4 +1617,171 @@ article.featured-article {
 
 .event-card img {
 	padding-bottom: 1.5rem;
+}
+
+/* For screens 1200px and above (Large Desktops) */
+@media (max-width: 1200px) {
+    .event-grid {
+        grid-template-columns: 1fr 1fr;  /* Two columns on large screens */
+        gap: 4rem;
+    }
+
+    .event-card {
+        max-width: 600px;  /* Adjust card width */
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr; /* Stack the footer content */
+    }
+
+    .hero {
+        min-height: 35rem;  /* Adjust hero height for large screens */
+    }
+}
+
+/* For screens 992px and below (Tablets) */
+@media (max-width: 992px) {
+    .hero {
+        min-height: 30rem;  /* Adjust hero height */
+    }
+
+    .our-mission, .get-involved, .safety-section, .news-updates {
+        grid-template-columns: 1fr; /* Stack content in single column */
+        padding: 5rem 3rem;
+    }
+
+    .news-cards {
+        grid-template-columns: 1fr 1fr; /* Two columns for news cards */
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr; /* Stack footer sections */
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr 1fr;  /* Two columns for event grid */
+    }
+
+    .contact-us {
+        flex-direction: column; /* Stack the contact form and image */
+    }
+
+    .contact-image img {
+        width: 100%; /* Ensure the contact image is responsive */
+    }
+
+    .contact-options {
+        flex-direction: column; /* Stack contact options */
+    }
+
+    .locations-content {
+        flex-direction: column; /* Stack location list and map */
+    }
+}
+
+/* For screens 768px and below (Small Tablets and Phones) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;  /* Reduce font size for smaller screens */
+    }
+
+    nav {
+        grid-template-columns: 1fr; /* Stack nav items */
+        padding: 1rem;
+    }
+
+    .hero {
+        min-height: 25rem;  /* Adjust hero height */
+    }
+
+    .news-cards {
+        grid-template-columns: 1fr; /* Stack news cards vertically */
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;  /* Stack about section content */
+    }
+
+    .values-grid {
+        flex-direction: column; /* Stack values vertically */
+        gap: 3rem;
+    }
+
+    .team-grid {
+        flex-direction: column; /* Stack team members vertically */
+        gap: 3rem;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr; /* One column for events */
+    }
+
+    .red-button {
+        width: 100%; /* Make button full-width */
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;  /* Stack footer sections */
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;  /* Stack footer sections */
+    }
+
+    .contact-us {
+        padding: 3rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form-area {
+        max-width: 100%;  /* Ensure form area uses full width */
+    }
+}
+
+/* For screens 480px and below (Mobile Phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;  /* Make the main heading smaller */
+    }
+
+    nav {
+        padding: 1rem 2rem; /* Adjust padding for smaller devices */
+    }
+
+    .hero {
+        min-height: 20rem;  /* Adjust hero height */
+    }
+
+    .our-mission, .get-involved, .safety-section, .news-updates {
+        padding: 5rem 2rem; /* Reduce padding for smaller screens */
+    }
+
+    .news-cards {
+        grid-template-columns: 1fr;  /* Stack news cards */
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;  /* Stack event cards */
+    }
+
+    .contact-us {
+        padding: 3rem 1rem;
+    }
+
+    .locations-section {
+        padding: 3rem 1rem;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr; /* Stack footer content */
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;  /* Stack footer content */
+    }
+
+    .footer-col img {
+        width: 100%;  /* Ensure footer images are responsive */
+    }
 }
