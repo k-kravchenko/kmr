@@ -1288,12 +1288,6 @@ a.p2{
   background-color: #fff;
 }
 
-.what-matters h2 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  font-family: "Krona One";
-}
-
 .what-matters p {
   max-width: 768px;
   margin-left: auto;
@@ -1329,12 +1323,6 @@ a.p2{
   padding: 7rem 5rem;
   text-align: center;
   background-color: #fff;
-}
-
-.meet-the-team h2 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  font-family: "Krona One";
 }
 
 .meet-the-team p {
@@ -1654,7 +1642,7 @@ summary::-webkit-details-marker {
 	  padding: 4rem 2rem;
 	  justify-content: center;
 	}
-  
+
 	.hero article {
 	  padding: 0;
 	}
@@ -1856,6 +1844,10 @@ summary::-webkit-details-marker {
 
 	/* About Us Page */
 
+	.about-section{
+		padding: 0;
+	}
+
 	.about-content {
 		padding: 3rem 1.5rem;
 	  }
@@ -1863,11 +1855,6 @@ summary::-webkit-details-marker {
 	  .what-matters,
 	  .meet-the-team {
 		padding: 3rem 1.5rem;
-	  }
-
-	  .team-member img {
-		width: 64px;
-		height: 64px;
 	  }
 	
 	  .value-item {
