@@ -1846,6 +1846,47 @@ summary::-webkit-details-marker {
 		justify-items: center;
 	  }
 
+	  /* Contact Us */
+
+	  .contact-us {
+		flex-direction: column;
+		gap: 3rem;
+		padding: 5rem 2rem;
+		text-align: center;
+		align-items: center;
+	  }
+	
+	  .contact-form-area {
+		max-width: 100%;
+	  }
+	
+	  .contact-image img {
+		width: 100%;
+		height: auto;
+	  }
+	
+	  .contact-options {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		padding: 0 2rem;
+		justify-items: center;
+		margin-bottom: 4rem;
+	  }
+	
+	  .locations-content {
+		flex-direction: column;
+		gap: 2rem;
+	  }
+	
+	  .location-map img {
+		width: 100%;
+		height: auto;
+	  }
+	
+	  .locations-section {
+		padding: 5rem 2rem;
+	  }
   }
   
   
@@ -1995,6 +2036,41 @@ summary::-webkit-details-marker {
 	
 	  .section-intro p {
 		font-size: 1rem;
+	  }
+
+	   /* Contact Us */
+
+	   .contact-form-area h1 {
+		font-size: 2rem;
+	  }
+	
+	  .contact-options {
+		grid-template-columns: 1fr;
+		padding: 0 1.5rem;
+	  }
+	
+	  .contact-card {
+		text-align: center;
+	  }
+
+	  .locations-content {
+		align-items: center;
+	  }
+	
+	  .locations-section h2 {
+		font-size: 1.8rem;
+	  }
+	
+	  .locations-section p {
+		font-size: 1rem;
+	  }
+	
+	  .location-list {
+		text-align: center;
+	  }
+	
+	  .locations-section {
+		padding: 4rem 1.5rem;
 	  }
 
   }
@@ -2174,5 +2250,51 @@ summary::-webkit-details-marker {
 	  .event-card p {
 		font-size: 0.95rem;
 	  }
+
+	   /* Contact Us */
+
+	   .contact-us {
+		padding: 3rem 1rem;
+	  }
+	
+	  .contact-form-area h1 {
+		font-size: 1.8rem;
+	  }
+	
+	  .contact-form-area p,
+	  .contact-form-area .p2 {
+		font-size: 0.95rem;
+	  }
+	
+	  .form-terms label {
+		font-size: 0.85rem;
+	  }
+	
+	  .contact-options {
+		gap: 2rem;
+		padding: 0 1rem;
+	  }
+	
+	  .locations-section {
+		padding: 3rem 1rem;
+	  }
+	
+	  .locations-section h2 {
+		font-size: 1.6rem;
+	  }
+	
+	  .locations-section p.p2 {
+		font-size: 0.95rem;
+	  }
+	
+	  .location-item h4 {
+		font-size: 1.2rem;
+	  }
+	
+	  .location-map img {
+		width: 100%;
+		height: auto;
+	  }
+
   }
 
