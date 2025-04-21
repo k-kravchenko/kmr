@@ -1253,7 +1253,7 @@ a.p2{
   }
   
   .about-section {
-    padding: 7rem 5rem;
+    padding: 7rem 5rem 0 5rem;
     background-color: #fff;
   }
   
@@ -1283,7 +1283,7 @@ a.p2{
 
 /* Added CSS for what-matters and values section */
 .what-matters {
-  padding: 7rem 5rem;
+  padding: 7rem 5rem 0 5rem;
   text-align: center;
   background-color: #fff;
 }
@@ -1371,7 +1371,7 @@ a.p2{
   margin-bottom: 1.5rem;
 }
 
-.social-icons {
+.team-member.social-icons {
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
@@ -1613,6 +1613,16 @@ article.featured-article {
 	padding-bottom: 1.5rem;
 }
 
+summary::-webkit-details-marker {
+	display: none;
+}	
+::-webkit-details-marker {
+	display: none;
+}	
+summary::-webkit-details-marker {
+	content: "";
+}	
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -1717,6 +1727,24 @@ article.featured-article {
 	  width: 100%;
 	  height: auto;
 	}
+
+	 /* About Us Page */
+
+	 .about-content {
+		grid-template-columns: 1fr;
+	  }
+
+	  .values-grid {
+		gap: 3rem;
+	  }
+	
+	  .team-grid {
+		gap: 3rem;
+	  }
+
+	  .value-item {
+		margin-bottom: 2rem;
+	  }
   }
   
   
@@ -1759,6 +1787,22 @@ article.featured-article {
 	.footer-col {
 	  margin-bottom: 2rem;
 	}
+
+	/* About Us Page */
+
+	.about-content .about-heading h1 {
+		font-size: 2.5rem;
+	  }
+	
+	  .values-grid {
+		flex-direction: column;
+		align-items: center;
+	  }
+	
+	  .team-grid {
+		flex-direction: column;
+		align-items: center;
+	  }
   }
   
   
@@ -1809,4 +1853,24 @@ article.featured-article {
 	  width: 100%;
 	  height: auto;
 	}
+
+	/* About Us Page */
+
+	.about-content {
+		padding: 3rem 1.5rem;
+	  }
+	
+	  .what-matters,
+	  .meet-the-team {
+		padding: 3rem 1.5rem;
+	  }
+
+	  .team-member img {
+		width: 64px;
+		height: 64px;
+	  }
+	
+	  .value-item {
+		text-align: center;
+	  }
   }
