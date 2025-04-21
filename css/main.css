@@ -19,6 +19,7 @@ nav {
     grid-template-columns: 0.3fr 0.55fr 0.15fr;
     padding: 1rem 5rem;
     justify-items: stretch;
+	justify-content: space-between
 }
 
 nav a,
@@ -33,6 +34,7 @@ nav button.weather-section {
 	padding: 0;
 	cursor: pointer;
 	text-decoration: none;
+	width: max-content;
 }
 
 nav a.hover { 
@@ -92,6 +94,7 @@ img{
 	background-color: #F5F9FB;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
 	justify-items: end;
 	padding: 7rem 5rem;
 }
@@ -99,10 +102,11 @@ img{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
+	gap: 1.5rem;
 	margin-bottom: 5rem;
 }
 
-.donate-button, .red-button, .button-primary {
+.donate-button {
 	color: #FFF;
 	text-decoration: none;
 	background-color: #CD0205;
@@ -112,8 +116,24 @@ img{
 	line-height: 150%;
 	padding: 0.5rem 1.25rem;
 	border: none;
+	margin-left: 1rem;
+	width: max-content;
 }
 
+.red-button, .button-primary {
+	color: #FFF;
+	text-decoration: none;
+	background-color: #CD0205;
+	font-family: "Source Sans 3";
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 150%;
+	padding: 0.5rem 1.25rem;
+	border: none;
+	margin-bottom: 1rem;
+	cursor: pointer;
+	width: fit-content;
+}
 
 .hero{
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/kevin-schmid-hero.jpg') no-repeat center center;
@@ -140,6 +160,7 @@ img{
 	background-color: #fff;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
 	justify-items: start;
 	align-items: center;
 	padding: 7rem 5rem;
@@ -149,6 +170,7 @@ img{
 	background-color: #F5F9FB;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
 	justify-items: end;
 	align-items: center;
 	padding: 7rem 5rem;
@@ -170,8 +192,6 @@ img{
 	justify-items: center;
 }
 
-
-  
   .blog-card {
 	max-width: 425px;
 	width: 100%;
@@ -195,6 +215,7 @@ img{
 	text-decoration: none;
 	color: #1C1C1C;
 }
+
 .button-secondary {
 	font-family: "Source Sans 3";
 	font-size: 1rem;
@@ -202,6 +223,7 @@ img{
 	color: #1C1C1C;
 	padding: 0.5rem 1.25rem;
 	border: solid #1C1C1C;
+	margin-bottom: 1rem;
 }
 
 .card-title {
@@ -435,18 +457,6 @@ a.p2{
 	font-family: "Source Sans 3";
 	font-size: 0.875rem;
 	margin: 0;
-  }
-  
-  .red-button {
-	background-color: #CD0205;
-	color: #fff;
-	font-family: "Source Sans 3";
-	font-size: 1rem;
-	font-weight: 700;
-	padding: 0.75rem 1.25rem;
-	border: none;
-	cursor: pointer;
-	width: fit-content;
   }
   
   .red-button:focus {
@@ -762,20 +772,6 @@ img{
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
 	margin-bottom: 5rem;
-}
-
-.donate-button, .red-button, .button-primary {
-	color: #FFF;
-	text-decoration: none;
-	background-color: #CD0205;
-	font-family: "Source Sans 3";
-	font-size: 1rem;
-	font-weight: 700;
-	line-height: 150%;
-	padding: 0.5rem 1.25rem;
-	border: none;
-	cursor: pointer;
-	width: fit-content;
 }
 
 
@@ -1621,57 +1617,196 @@ article.featured-article {
    Media Queries
    ========================================================================== */
 
-/* ── Tablets / small desktops ── */
+/* ── Home Page ── */
+
+/* Tablets and below (≤ 992px) */
 @media (max-width: 992px) {
-  /* 2 columns for the blog grid */
-  .blog-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+	nav {
+	  grid-template-columns: 1fr;
+	  row-gap: 1rem;
+	  padding: 1rem 2rem;
+	  text-align: center;
+	}
+  
+	.navlinks {
+	  justify-content: center;
+	  flex-wrap: wrap;
+	  gap: 1rem;
+	}
+  
+	.donate {
+	  justify-self: center;
+	}
+  
+	.hero {
+	  flex-direction: column;
+	  text-align: center;
+	  padding: 4rem 2rem;
+	  justify-content: center;
+	}
+  
+	.hero article {
+	  padding: 0;
+	}
+  
+	.our-mission,
+	.safety-section,
+	.get-involved,
+	.explore-safely {
+	  grid-template-columns: 1fr;
+	  justify-items: center;
+	  text-align: center;
+	  padding: 4rem 2rem;
+	}
+  
+	.stats-section,
+	.missionstat,
+	.safety-image,
+	.safety-content,
+	.get-involved-content,
+	.get-involved-image,
+	.explore-safely-content {
+	  width: 100%;
+	}
+  
+	.numbers {
+	  grid-template-columns: 1fr 1fr;
+	  row-gap: 2rem;
+	}
+  
+	.news-cards {
+	  display: grid;
+	  grid-template-columns: 1fr;
+	  gap: 2rem;
+	  padding: 0 1rem;
+	}
+  
+	.news-card {
+	  margin: 0 auto;
+	}
 
-  /* Stack the featured article */
-  .featured-article {
-    grid-template-columns: 1fr;
-  }
+	.explore-safely-buttons {
+		justify-content: center;
+	}
+  
+	.footer-top,
+	.footer-bottom {
+	  grid-template-columns: 1fr;
+	  padding: 2rem;
+	  text-align: center;
+	}
+	.social-icons{
+		justify-content: center;
+	}
 
-  /* Tighter padding on headings & sections */
-  .news-heading,
-  .featured-article,
-  .blog-grid,
-  .get-involved-cta {
-    padding: 5rem 2rem;
+	.legal-links {
+	  justify-content: center;
+	  flex-wrap: wrap;
+	  gap: 1rem;
+	}
+  
+	.weather-conditions {
+	  grid-template-columns: 1fr;
+	}
+  
+	.weather-right {
+	  padding-top: 2rem;
+	}
+  
+	.graph-section img {
+	  width: 100%;
+	  height: auto;
+	}
   }
-}
+  
+  
+  /* Mobile phones (≤ 768px) */
+  @media (max-width: 768px) {
+	h1 {
+	  font-size: 2.2rem;
+	}
+  
+	h2 {
+	  font-size: 1.8rem;
+	}
+  
+	h3 {
+	  font-size: 1.4rem;
+	}
+  
+	p {
+	  font-size: 1rem;
+	}
+  
+	.donate-button,
+	.red-button,
+	.button-primary,
+	.button-secondary {
+	  text-align: center;
+	  display: inline-block;
+	  width: auto;
+	}
+  
+	.explore-safely-buttons {
+	  gap: 1rem;
+	}
+  
+	.social-icons {
+	  justify-content: center;
+	}
+  
+	.footer-column,
+	.footer-col {
+	  margin-bottom: 2rem;
+	}
+  }
+  
+  
+  /* Small devices (≤ 480px) */
+  @media (max-width: 480px) {
+	nav img {
+	  max-width: 100px;
+	  height: auto;
+	}
+  
+	.hero {
+	  padding: 3rem 1rem;
+	}
+  
+	.our-mission,
+	.safety-section,
+	.get-involved,
+	.explore-safely {
+	  padding: 3rem 1rem;
+	}
+  
+	.news-updates {
+	  padding: 3rem 1rem;
+	}
+  
+	.news-card img {
+	  width: 100%;
+	  height: auto;
+	}
+  
+	.numbers {
+	  grid-template-columns: 1fr;
+	}
 
-/* ── Phablets / large phones ── */
-@media (max-width: 768px) {
-  /* Full‑width single column */
-  .blog-grid {
-    grid-template-columns: 1fr;
+	.explore-safely-buttons {
+		flex-direction: column;
+	  }
+  
+	.footer-top {
+	  padding: 2rem 1rem;
+	}
+  
+	.footer-bottom {
+	  padding: 1rem;
+	}
+  
+	.graph-section img {
+	  width: 100%;
+	  height: auto;
+	}
   }
-
-  /* Center each card */
-  .blog-card {
-    margin: 0 auto 2rem;
-  }
-
-  /* Narrower heading padding */
-  .news-heading {
-    padding: 0 1rem;
-  }
-}
-
-/* ── Mobile phones ── */
-@media (max-width: 480px) {
-  /* Even less padding */
-  .news-heading,
-  .featured-article,
-  .blog-grid {
-    padding: 2rem 1rem;
-  }
-
-  /* Featured image: full width */
-  .featured-article .featured-image img {
-    width: 100%;
-    height: auto;
-  }
-}
