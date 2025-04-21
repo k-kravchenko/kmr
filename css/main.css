@@ -1750,6 +1750,50 @@ summary::-webkit-details-marker {
 		min-width: auto;
 	  }
 
+	   /* News and Updates */
+
+	  .news-heading {
+		padding: 4rem 2rem 3rem;
+		text-align: center;
+	  }
+	
+	  .news-grid {
+		padding: 0 2rem 4rem;
+	  }
+	
+	  .featured-article {
+		grid-template-columns: 1fr;
+		text-align: center;
+		justify-items: center;
+		gap: 1rem;
+	  }
+	
+	  .featured-content {
+		align-items: center;
+		padding-top: 2rem;
+	  }
+	
+	  .blog-grid {
+		grid-template-columns: 1fr;
+		gap: 4rem;
+		padding: 0 2rem;
+	  }
+	
+	  .blog-card img {
+		width: 100%;
+	  }
+	
+	  .get-involved-cta {
+		grid-template-columns: 1fr;
+		padding: 5rem 2rem;
+		text-align: center;
+		justify-items: center;
+	  }
+	
+	  .cta-buttons {
+		justify-content: center;
+	  }
+
   }
   
   
@@ -1840,6 +1884,28 @@ summary::-webkit-details-marker {
 	  .cta-images img {
 		width: 100%;
 		height: auto;
+	  }
+
+	  /* News and Updates Page */
+
+	  .featured-content h2 {
+		font-size: 1.8rem;
+	  }
+	
+	  .cta-text h2 {
+		font-size: 2rem;
+	  }
+	
+	  .cta-text p {
+		font-size: 1rem;
+	  }
+	
+	  .blog-card h4 {
+		font-size: 1.25rem;
+	  }
+	
+	  .blog-card p {
+		font-size: 0.95rem;
 	  }
 
   }
@@ -1948,4 +2014,37 @@ summary::-webkit-details-marker {
 	  .hypothermia-image {
 		padding: 3rem 1rem;
 	  }
+
+	  /* News and Updates Page */
+
+	  .news-heading {
+		padding: 3rem 1rem 2rem;
+	  }
+	
+	  .news-grid {
+		padding: 0 1rem 3rem;
+	  }
+	
+	  .blog-grid {
+		gap: 3rem;
+		padding: 3rem 1rem;
+	  }
+	
+	  .cta-text h2 {
+		font-size: 1.8rem;
+	  }
+	
+	  .cta-text p {
+		font-size: 0.95rem;
+	  }
+	
+	  .cta-buttons {
+		flex-direction: column;
+		align-items: center;
+	  }
+
+	  .get-involved-cta {
+		padding: 3rem 1rem;
+	  }
   }
+
