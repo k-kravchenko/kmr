@@ -1733,6 +1733,27 @@ summary::-webkit-details-marker {
 	  .value-item {
 		margin-bottom: 2rem;
 	  }
+
+	   /* Safety Page */
+	   .safety-intro-grid {
+		grid-template-columns: 1fr;
+	  }
+	
+	  .safety-intro-image {
+		margin-top: 3rem;
+		text-align: center;
+	  }
+	
+	  .avalanche-images,
+	  .cta-images {
+		grid-template-columns: 1fr;
+		padding: 5rem 2rem;
+	  }
+	
+	  .faq-item summary p {
+		min-width: auto;
+	  }
+
   }
   
   
@@ -1791,6 +1812,40 @@ summary::-webkit-details-marker {
 		flex-direction: column;
 		align-items: center;
 	  }
+
+	   /* Safety Page */
+	   .safety-intro {
+		padding: 5rem 2rem;
+	  }
+
+	  .safety-intro-grid {
+		gap: 1rem;
+	  }
+	
+	  .avalanche-safety, .mountain-safety-message, .hypothermia-safety {
+		padding: 4rem 5rem;
+	  }
+
+	  .safety-headline {
+		max-width: 100%;
+		text-align: center;
+	  }
+
+	  .avalanche-faqs, .hypothermia-faqs {
+		padding: 0 5rem 7rem 5rem;
+	}
+	
+	  .hypothermia-image img {
+		width: 100%;
+		height: auto;
+	  }
+	
+	  .avalanche-images img,
+	  .cta-images img {
+		width: 100%;
+		height: auto;
+	  }
+
   }
   
   
@@ -1859,5 +1914,42 @@ summary::-webkit-details-marker {
 	
 	  .value-item {
 		text-align: center;
+	  }
+
+	   /* Safety Page */
+
+	   .safety-intro, .avalanche-safety, .mountain-safety-message, .hypothermia-safety, .avalanche-faqs, .hypothermia-faqs {
+		padding: 3rem 1rem;
+	  }
+	
+	  .safety-headline h1 {
+		font-size: 2rem;
+	  }
+	
+	  .safety-headline p {
+		font-size: 1rem;
+	  }
+	
+	  .faq-item p.p2 {
+		margin-top: 1rem;
+		font-size: 0.95rem;
+	  }
+	
+	  .faq-item summary p {
+		font-size: 1rem;
+	  }
+	
+	  .red-line {
+		border-left-width: 4px;
+	  }
+	
+	  .avalanche-images,
+	  .cta-images {
+		padding: 3rem 1rem;
+		gap: 1.5rem;
+	  }
+	
+	  .hypothermia-image {
+		padding: 3rem 1rem;
 	  }
   }
