@@ -33,12 +33,12 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// JS for an accordion
+// JS for an accordion 
 const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
   const summary = item.querySelector('summary');
-  const arrow = summary.querySelector('.arrow'); 
+  const arrow = summary.querySelector('.arrow');
 
   summary.addEventListener('click', () => {
     faqItems.forEach(otherItem => {
