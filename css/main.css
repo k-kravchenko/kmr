@@ -1647,6 +1647,14 @@ summary::-webkit-details-marker {
 	content: "";
 }
 
+details summary {
+	list-style: none; /* some browsers need this */
+  }
+  
+  details summary::marker {
+	display: none;
+  }
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
