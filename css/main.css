@@ -347,15 +347,13 @@ a.p2 {
 	max-width: 768px;
 }
 
-/* ::marker {
-	content: none; 
-} */
-
-.faq-item summary p {
+.faq-item summary {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 	min-width: 768px;
+	font-family: "Source Sans 3";
+	font-size: 1.125rem;
 }
 
 .arrow {
@@ -1635,18 +1633,6 @@ textarea.message-box {
 	padding-bottom: 1.5rem;
 }
 
-summary::-webkit-details-marker {
-	display: none;
-}
-
-::-webkit-details-marker {
-	display: none;
-}
-
-summary::-webkit-details-marker {
-	content: "";
-}
-
 details summary {
 	list-style: none; /* some browsers need this */
   }
@@ -1795,8 +1781,9 @@ details summary {
 		padding: 5rem 2rem;
 	}
 
-	.faq-item summary p {
+	.faq-item summary {
 		min-width: auto;
+
 	}
 
 	/* News and Updates */
